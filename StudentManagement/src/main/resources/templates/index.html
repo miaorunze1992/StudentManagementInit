@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+        <link rel="stylesheet" th:href="@{/font/bootstrap-icons.css}">
+        <script th:src="@{/js/jquery-3.6.3.js}"></script>
+        <script th:src="@{/js/bootstrap.js}"></script>
+        <title>StudentManagement登录页面</title>
+    </head>
+    <body>
+        <div class="container-fluid p-1 bg-primary text-white text-center">
+            <h1 class="page-header">CloudByteのプロジェクト<br><small>ユーザーログイン画面</small></h1>
+        </div>
+        <div style="margin-top: 80px"></div>
+        <div class="container">
+            <div th:if="${errorMsg}" class="alert alert-warning">
+                <strong th:text="${errorMsg}"></strong>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header text-center text-bg-primary">ログイン</div>
+                        <div class="card-body">
+                            <form action="userLogin" method="post">
+                                <div class="mb-3">
+                                    <label for="username" class="form-label"><i class="bi bi-pause"></i>ユーザーID：</label>
+                                    <input type="text" class="form-control" id="username" placeholder="ユーザーID" name="username">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label"><i class="bi bi-pause"></i>パスワード：</label>
+                                    <input type="password" class="form-control" id="password" placeholder="パスワード" name="password">
+                                </div>
+                                <div class="form-check mb-3">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember"> ログイン状態を保存する
+                                        <a href="register" class="text-center">新規登録</a>
+                                    </label>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-block">ログイン</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+    </body>
+</html>

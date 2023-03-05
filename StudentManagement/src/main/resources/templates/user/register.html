@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+        <link rel="stylesheet" th:href="@{/font/bootstrap-icons.css}">
+        <script th:src="@{/js/jquery-3.6.3.js}"></script>
+        <script th:src="@{/js/bootstrap.js}"></script>
+        <title>StudentManagement登录页面</title>
+    </head>
+    <body>
+        <div class="container-fluid p-1 text-white" style="background-color: #012060">
+            <h4 class="page-header">ユーザー登録画面</h4>
+        </div>
+        <div style="margin-top: 80px"></div>
+        <div class="container">
+            <div th:if="${errorMsg}" class="alert alert-warning">
+                <strong th:text="${errorMsg}"></strong>
+            </div>
+            <form action="userRegister" method="post">
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr>
+                        <td class="text-center overflow-hidden" style="vertical-align: middle;background-color: #DAEEF3;">
+                            ユーザーID
+                        </td>
+                        <td style="width: 85%"><input type="text" style="border: none;" class="form-control"
+                                                      id="username" placeholder="ユーザーID" name="username"></td>
+                    </tr>
+                    <tr style="height: 20px"></tr>
+                    <tr>
+                        <td class="text-center overflow-hidden" style="vertical-align: middle;background-color: #DAEEF3;">
+                            パスワード
+                        </td>
+                        <td style="width: 85%"><input type="password" style="border: none;" class="form-control"
+                                                      id="password" placeholder="パスワード" name="password"></td>
+                    </tr>
+                    <tr style="height: 20px"></tr>
+                    <tr>
+                        <td class="text-center overflow-hidden" style="vertical-align: middle;background-color: #DAEEF3;height: 53px">性別
+                        </td>
+                        <td style="width: 85%;">
+                            <label class="form-check-label" for="gender0" style="margin-left: 20px;margin-top: 5px">男</label>
+                            <input type="radio" class="form-check-input" id="gender0" name="gender" value="0" checked style="margin-top: 10px">
+                            <label class="form-check-label" for="gender1" style="margin-left: 20px">女</label>
+                            <input type="radio" class="form-check-input" id="gender1" name="gender" value="1" checked style="margin-top: 10px">
+                        </td>
+                    </tr>
+                    <tr style="height: 20px"></tr>
+                    <tr>
+                        <td class="text-center overflow-hidden" style="vertical-align: middle;background-color: #DAEEF3;">住所
+                        </td>
+                        <td style="width: 85%"><input type="text" style="border: none;" class="form-control"
+                                                      id="address" placeholder="住所" name="address"></td>
+                    </tr>
+                    <tr style="height: 20px"></tr>
+                    <tr>
+                        <td class="text-center overflow-hidden" style="vertical-align: middle;background-color: #DAEEF3;">国籍
+                        </td>
+                        <td style="width: 85%">
+                            <select class="form-select" style="border: none;" name="country">
+                                <option value="0">中国</option>
+                                <option value="1">日本</option>
+                                <option value="2">其他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr style="height: 20px"></tr>
+                    <tr>
+                        <td class="text-center overflow-hidden" style="vertical-align: middle;background-color: #DAEEF3;">備考
+                        </td>
+                        <td style="width: 85%"><input type="text" style="border: none;" class="form-control"
+                                                      id="comment" placeholder="備考" name="comment">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-sm text-white" style="text-align: right">
+                        <button type="submit" class="btn btn-lg text-white" style="margin-right: 5px;background-color: #012060;width: 150px;">
+                            登録
+                        </button>
+                        <button type="button" class="btn btn-lg text-white" style="margin-right: 5px;background-color: #012060;width: 150px;" onclick="javascript:window.history.back(-1)">
+                            キャンセル
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

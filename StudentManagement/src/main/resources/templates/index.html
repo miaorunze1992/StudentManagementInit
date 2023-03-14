@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-		888
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+	</head>
+	<body>
+		<h1>CloudByteのプロジェクト <br><small>ユーザーログイン画面</small></h1>
+		<form action="userLogin" method="get">
+			<label for="username">ユーザーID：</label><br>
+			<input type="text" id="username" name="username" placeholder="ユーザーID："><br>
+			<label for="password">パスワード：</label><br>
+			<input type="password" id="password" name="password"  placeholder="パスワード："><br>
+			<input type="checkbox" id="remember" value="remember">
+			<label for="remember">ログイン状態を保存する</label>
+			<a href="register">新規登録</a><br>
+			<input type="submit" value="ログイン">
+		</form>
+	</body>
 </html>

@@ -1,9 +1,12 @@
 package co.jp.cloudbyte.StudentManagement.service;
 
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import co.jp.cloudbyte.StudentManagement.form.LoginForm;
 
+
+@Service
 public class LoginServiceImpl implements LoginService{
 
 	@Override

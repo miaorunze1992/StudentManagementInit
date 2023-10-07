@@ -31,7 +31,7 @@ public class LoginController {
 
 
 	// TODO更改后的注释
-  // mohan更改了代码
+    // 李秋实再次更改了代码
 	@RequestMapping("register")
 	public String userRegister() {
 		return "userRegister";

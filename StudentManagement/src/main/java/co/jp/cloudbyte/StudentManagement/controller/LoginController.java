@@ -29,7 +29,7 @@ public class LoginController {
 	
 	}
 
-	// mohan更改
+	// mohan更改了代码
 	@RequestMapping("register")
 	public String userRegister() {
 		return "userRegister";

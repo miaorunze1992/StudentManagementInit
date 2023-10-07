@@ -29,7 +29,7 @@ public class LoginController {
 	
 	}
 
-	
+	// TODO新添加的注释
 	@RequestMapping("register")
 	public String userRegister() {
 		return "userRegister";

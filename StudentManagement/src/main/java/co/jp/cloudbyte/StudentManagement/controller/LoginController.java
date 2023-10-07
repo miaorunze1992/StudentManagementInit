@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import co.jp.cloudbyte.StudentManagement.form.LoginForm;
 import co.jp.cloudbyte.StudentManagement.service.LoginService;
-import co.jp.cloudbyte.StudentManagement.service.LoginServiceImpl;
 
 @Controller
 public class LoginController {

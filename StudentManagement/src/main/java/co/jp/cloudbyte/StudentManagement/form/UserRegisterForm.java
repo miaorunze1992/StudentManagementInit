@@ -1,9 +1,9 @@
-package co.jp.cloudbyte.StudentManagement.entity;
+package co.jp.cloudbyte.StudentManagement.form;
 
 import lombok.Data;
 
 @Data
-public class UserInfo {
+public class UserRegisterForm {
 	
 	private String username;
 	private String password;

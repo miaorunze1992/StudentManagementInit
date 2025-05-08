@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>用户注册页面</title>
+    <!-- 引入 jQuery（使用 CDN） -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-// 用户注册页面
-TODO
+
+    <h1>CloudByteのプロジェクト <br><small>用户注册页面</small></h1>
+
+    <form action="userRegister" method="post">
+        <label for="username">ユーザーID：</label><br>
+        <input type="text" id="username" name="username" placeholder="ユーザーID："><br>
+        <label for="password">パスワード：</label><br>
+        <input type="password" id="password" name="password" placeholder="パスワード："><br>
+        <input type="submit" value="注册">
+    </form>
+
+    <!-- jQuery 交互逻辑 -->
+    <script>
+        $(document).ready(function() {
+            $("form").on("submit", function(e) {
+                const username = $("#username").val().trim();
+                const password = $("#password").val().trim();
+
+                if (!username || !password) {
+                    alert("ユーザーIDとパスワードは必須です！");
+                    e.preventDefault(); // 阻止提交
+                } else {
+                    alert("登録処理を開始します...");
+                    // 表单继续提交
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
